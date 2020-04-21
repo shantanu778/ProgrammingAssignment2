@@ -18,8 +18,11 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## Here I first check the cache if cache is empty. I check the class of the input whether it is a "Matrix" or not.
+## Then, I also check the determine of that matrix. because if the determination of matrix is equal to 0 then we can't find the Inverse Matrix.
+## I also keep that process into tryCatch() function if Given Matrix is not a Square then it will also raise an Error. So I put a check Here too.
+## After finding the inverse Matrix I set it on Cache and then return the Inverse matrix value.
+ 
 cacheSolve <- function(x, ...) {
 	m <- x$getinverseMat()
 	  if(!is.null(m)) {
